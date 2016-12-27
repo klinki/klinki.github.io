@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## C++ placement new operator and memory layout
 I have discovered placement new operator when I worked on my Java Virtual Machine. It is useful when you need to dynamically create new instance of class and place it into already allocated memory. This is not so common scenario, but it necessary if you want to write your own memory allocation system.
@@ -25,7 +25,7 @@ int main(int argc, const char** arv)
 
 	A* object = new(rawMemory) A();
     
-    // CANNOT CALL delete object - it would lead to memory corruption
+    // delete object; - CANNOT CALL delete, it would lead to memory corruption
 	object->~A(); // manually call destructor, if you need to get rid of object
     
     delete[] rawMemory; // at the end, release ALL allocated memory
@@ -46,4 +46,4 @@ You also need to keep in mind you need to manage the memory manually byte by byt
     A* secondObject = new(rawMemory + sizeof(A)) A(); // this is the way to go
 ```
 
-This is the first part of memory allocation and garbage collection implementation series. I would like to continue with articles about memory layout, implementing garbage collector and finalization. 
+This is the first part of memory allocation and garbage collection implementation series. I would like to continue with articles about memory layout, implementing garbage collector and finalization.

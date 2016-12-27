@@ -21,14 +21,16 @@ class A
 int main(int argc, const char** arv) 
 {
 	const int MEMORY_SIZE = 65536; // 64 kB
-	char* rawMemory = new char[MEMORY_SIZE]; // allocating own memory pool
+	char* rawMemory = new char[MEMORY_SIZE]; 
+	// allocating own memory pool
 
 	A* object = new(rawMemory) A();
     
-    // delete object; - CANNOT CALL delete, it would lead to memory corruption
+	// delete object;
+	// CANNOT CALL delete, it would lead to memory corruption
 	object->~A(); // manually call destructor, if you need to get rid of object
     
-    delete[] rawMemory; // at the end, release ALL allocated memory
+	delete[] rawMemory; // at the end, release ALL allocated memory
     
 	return 0;
 }
@@ -40,10 +42,11 @@ You also need to keep in mind you need to manage the memory manually byte by byt
 
 
 ```c++
-	A* firstObject = new(rawMemory) A();
-    // A* secondObject = new (rawMemory) A(); // Cannot do this! It would overwrite the first object
-    
-    A* secondObject = new(rawMemory + sizeof(A)) A(); // this is the way to go
+A* firstObject = new(rawMemory) A();
+// A* secondObject = new (rawMemory) A();
+// Cannot do this! It would overwrite the first object
+A* secondObject = new(rawMemory + sizeof(A)) A();
+// this is the way to go
 ```
 
 This is the first part of memory allocation and garbage collection implementation series. I would like to continue with articles about memory layout, implementing garbage collector and finalization.

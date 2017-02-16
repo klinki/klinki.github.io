@@ -19,3 +19,6 @@ Unfortunately those limitations were too restrictie for my use case and I had to
 
 But I'm starting to wory about reduced testability of such components. Mocking ActivatedRoute.data (or params) is now not enough anymore, I have to mock also Router.events. And I'm starting to feel I'm breaking SOLID principle. Components are not behaving like black box anymore - they use data from routes without explicitly saying that. It feels almost like service locator pattern (which is being considered as anti pattern and is preferred to be replaced with constructor or attribute DI).
 
+
+#### Changing route to componentless
+Child routes automatically inherit, you cannot prevent it. You have to deal with it. IMHO current situation with hierarchical routes is so bad, it makes me think it would be better if routes NEVER inherited params and data. It would be at least consistent, if not anything else at all. Now I ended up with having my custom written workaround which works perfectly fine, when data are not inherited and I need them to be, but when they suddenly do inherit, it is problem to prevent that.

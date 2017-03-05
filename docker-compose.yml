@@ -1,0 +1,10 @@
+version: "2"
+services: 
+  jekyll:
+    image: jekyll/jekyll:pages
+    command: jekyll serve --watch --incremental --drafts
+    volumes:
+      - ./:/srv/jekyll
+    ports: 
+      - 4000:4000
+      - 8080:80

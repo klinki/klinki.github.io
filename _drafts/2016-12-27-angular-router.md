@@ -22,3 +22,11 @@ But I'm starting to wory about reduced testability of such components. Mocking A
 
 #### Changing route to componentless
 Child routes automatically inherit, you cannot prevent it. You have to deal with it. IMHO current situation with hierarchical routes is so bad, it makes me think it would be better if routes NEVER inherited params and data. It would be at least consistent, if not anything else at all. Now I ended up with having my custom written workaround which works perfectly fine, when data are not inherited and I need them to be, but when they suddenly do inherit, it is problem to prevent that.
+
+
+### Reducing hierarchical routes boilerplate, test havoc
+I came with idea to reduce boilerplate with resolving hierarchical routes. I added most of it into Application component and don't depend on much of routing in other components. But it made test havoc - my prepared code for mocking routes could not be used in a same manner anymore.
+
+
+Sure, we might get architecture of our application wrong, but working with Angular router is huge pain in the a**. 
+

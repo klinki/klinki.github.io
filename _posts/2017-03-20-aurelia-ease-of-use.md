@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## Aurelia ease of use
 On my last project I had a chance to work with Aurelia. I needed to use some frontend framework capable of being easily used with existing server rendered application. This single requirement automatically crossed out Angular, so I had to look for some alternative. Since I knew little bit about Aurelia and I found out it is easily embeddable ito existing app, I decided to use it.

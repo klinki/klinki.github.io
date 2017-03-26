@@ -2,7 +2,7 @@
 published: true
 ---
 ## C++ placement new operator and memory layout
-I have discovered placement new operator when I worked on my Java Virtual Machine. It is useful when you need to dynamically create new instance of class and place it into already allocated memory. This is not so common scenario, but it necessary if you want to write your own memory allocation system.
+I have discovered placement `new` operator when I worked on my Java Virtual Machine. It is useful when you need to dynamically create new instance of class and place it into already allocated memory. This is not so common scenario, but it is necessary if you want to write your own memory allocation system.
 
 Here is short code example, how to use it:
 
@@ -36,7 +36,7 @@ int main(int argc, const char** arv)
 }
 ```
 
-There are some circuimstances for using placement new. You must not call any kind of delete operator on data allocated using placement new. It would lead into memory corruption, since default C/C++ allocator (either new or malloc) keeps track of beginning address of allocated block and size of allocated chunk. Freeing memory with different address would lead into allocator failing to find allocated block.
+There are some circuimstances for using placement `new`. You must not call any kind of `delete` operator on data allocated using placement `new`. It would lead into memory corruption, since default C/C++ allocator (either `new` or `malloc`) keeps track of beginning address of allocated block and size of allocated chunk. Freeing memory with different address would lead into allocator failing to find allocated block.
 
 You also need to keep in mind you need to manage the memory manually byte by byte. So lets say you want to allocate more instances of A object. You have to use pointer arithmetics and move pointer into another address. Here is example:
 

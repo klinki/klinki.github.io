@@ -4,12 +4,32 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+My name is David Klingenberg and I'm a Software Developer. I love Computer Science and I'm not afraid of low level programming. I got my hands dirty even on some Assembly code.
 
-### More Information
+My favourite programming language is C#, but I also love C++. I like to program in all different kinds of programming languages in general, basically from C to Smalltalk :) Currently I'm profesionally working with TypeScript, JavaScript and Java.  
 
-A place to include any other types of information that you'd like to include about yourself.
+I love Open Source software and I'm proud to be working for Red Hat.
 
-### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+## Work Experience
+I have professional work experience with these languages and frameworks:
+
+### PHP
+- Nette Framework
+- Symfony 1
+- Symfony 2, 3
+- Doctrine 1
+- Doctrine 2
+
+### Java
+- Java SE
+- Java EE
+- Hibernate
+- Wildfly
+- RestEasy
+
+### JavaScript
+- AngularJS
+- Angular (version 2+)
+- Aurelia
+- jQuery

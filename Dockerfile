@@ -1,2 +1,3 @@
 FROM jekyll/jekyll:pages
-CMD jekyll s
+CMD jekyll s -w --drafts
+

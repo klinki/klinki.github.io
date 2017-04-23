@@ -14,6 +14,10 @@ description: Software Developer
 #
 # Flags below are optional
 #
+collections:
+  tags:
+    output: true
+    permalink: /blog/tag/:name
 
 # Includes an icon in the footer for each username you enter
 footer-links:

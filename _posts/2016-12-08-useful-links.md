@@ -1,7 +1,10 @@
 ---
-published: false
+published: true
+title: Useful links I found on the internet
 ---
-## Useful links I found on the internet
+Here are some interesting links I found on the internet.
+
+## Git
 
 - [Checkout Github pull request](https://gist.github.com/piscisaureus/3342247)
 

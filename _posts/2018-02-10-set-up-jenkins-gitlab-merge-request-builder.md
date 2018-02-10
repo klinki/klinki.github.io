@@ -1,3 +1,7 @@
+---
+published: true
+---
+
 In my current work we use self hosted Gitlab CE instance and Jenkins CI. We wanted to set up some integration between Gitlab and Jenkins to would build merge requests for us.
 
 There are quite a lot of articles on the internet on that topic, but we had one major problem - our self hosted Jenkins is on private network, while Gitlab is on different, public, network.

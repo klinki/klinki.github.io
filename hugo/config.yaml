@@ -1,4 +1,65 @@
-baseURL: http://example.org/
+baseURL: https://klinki.github.io/
 disablePathToLower: true
-languageCode: en-us
-title: My New Hugo Site
+languageCode: en
+title: Klinki's code blog
+theme: herring-cove
+
+languageCode: en
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+languages:
+  cs:
+    contentDir: content/cs
+    languageName: Čeština
+    params:
+      navigation:
+        about: O mne
+
+  en:
+    contentDir: content/en
+    languageName: English
+
+frontmatter:
+  date:
+    - ":filename:"
+    - ":default"
+
+  title:
+    - ":filename"
+    - ":default"
+
+permalinks:
+  posts: /blog/:year/:month/:day/:slug
+  pages: /:filename
+
+params:
+  navigation:
+    about: About
+
+pygmentsCodeFences: true
+# useFilenameDateAsFallback: true
+
+menu:
+  main:
+  - identifier: about
+    name: about hugo
+    pre: <i class='fa fa-heart'></i>
+    url: /about/
+    weight: -110
+
+  - identifier: blog
+    name: getting started
+    post: <span class='alert'>New!</span>
+    pre: <i class='fa fa-road'></i>
+    url: /getting-started/
+    weight: -100
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+  blog: "blogs"
+
+links:
+  Home : "/"
+  Blog: "/blog/"
+  About: "/about/"

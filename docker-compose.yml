@@ -1,10 +1,18 @@
 version: "2"
-services: 
+services:
   jekyll:
     image: jekyll/jekyll:pages
     command: jekyll serve --watch --incremental --drafts
     volumes:
       - ./:/srv/jekyll
-    ports: 
+    ports:
       - 4000:4000
       - 8080:80
+
+  hugo:
+    image: klakegg/hugo:0.55.5
+    command: server
+    volumes:
+      - ./:/src
+    ports:
+      - 1313:1313

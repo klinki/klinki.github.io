@@ -13,9 +13,9 @@ In modern computers memory is divided into chunks called pages. On most systems,
 Word is the smallest amount of memory CPU can work with. On x86 systems it is usally 32 bits, on x64 systems 64 bits. When you need to work with smaller data types (char for example) CPU will have to expand it to its default word size, execute the operation and truncate the result.
 
 ## Memory alignment
-Most of modern C++ compilers keep data structures memory aligned to multiples of word size. 
+Most of modern C++ compilers keep data structures memory aligned to multiples of word size.
 
-Does the order of data members in struct (class) matter? The answer is yes, it does. Some compilers might reallign it during compilation, but I wouldn't count on that, because it could lead into compiler-dependent behavior. 
+Does the order of data members in struct (class) matter? The answer is yes, it does. Some compilers might reallign it during compilation, but I wouldn't count on that, because it could lead into compiler-dependent behavior.
 
 Lets see the difference
 
@@ -42,8 +42,8 @@ struct C
 
 int main() {
 	cout << "Size of A is: " << sizeof(A) << " bytes" << endl;
-	cout << "Size of B is: " << sizeof(B) << " bytes" << endl;    
-	cout << "Size of C is: " << sizeof(C) << " bytes" << endl;    
+	cout << "Size of B is: " << sizeof(B) << " bytes" << endl;
+	cout << "Size of C is: " << sizeof(C) << " bytes" << endl;
 }
 ```
 Answer is

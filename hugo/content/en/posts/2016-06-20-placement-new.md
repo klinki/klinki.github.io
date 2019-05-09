@@ -1,7 +1,7 @@
 ---
 published: true
+title: C++ placement new operator and memory layout
 ---
-## C++ placement new operator and memory layout
 I have discovered placement `new` operator when I worked on my Java Virtual Machine. It is useful when you need to dynamically create new instance of class and place it into already allocated memory. This is not so common scenario, but it is necessary if you want to write your own memory allocation system.
 
 Here is short code example, how to use it:
@@ -18,20 +18,20 @@ class A
   ~A() { cout << "Destructor called" << endl; }
 }
 
-int main(int argc, const char** arv) 
+int main(int argc, const char** arv)
 {
 	const int MEMORY_SIZE = 65536; // 64 kB
-	char* rawMemory = new char[MEMORY_SIZE]; 
+	char* rawMemory = new char[MEMORY_SIZE];
 	// allocating own memory pool
 
 	A* object = new(rawMemory) A();
-    
+
 	// delete object;
 	// CANNOT CALL delete, it would lead to memory corruption
 	object->~A(); // manually call destructor, if you need to get rid of object
-    
+
 	delete[] rawMemory; // at the end, release ALL allocated memory
-    
+
 	return 0;
 }
 ```

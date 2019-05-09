@@ -1,0 +1,9 @@
+version: "2"
+services:
+  hugo:
+    image: klakegg/hugo:0.55.5
+    command: server
+    volumes:
+      - ./:/src
+    ports:
+      - 1313:1313

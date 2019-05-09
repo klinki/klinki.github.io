@@ -1,7 +1,8 @@
 ---
 published: false
+title: Hobby projekt v ASP.NET Core díl druhý - EF Core
 ---
-# Hobby projekt v ASP.NET Core díl druhý - EF Core
+
 Na samotném začátku projektu jsem přemýšlel, jaký zvolit ORM framework (a pokud vůbec nějaký používat). Mám rád [čistou architekturu](http://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) a chtěl jsem si vyzkoušet jak se dělá aplikace respektující tyto zásady v ASP.NETu. Jeden z mých hlavních požadavků na ORM knihovnu byl, aby se dala co nejsnáze odizolovat od doménových entit. Zjistil jsem, že tuto podmínku EF.Core celkem dobře splňuje (hlavně díky fluent konfiguraci) a tak jsem se rozhodl ho vyzkoušet.
 
 
@@ -18,8 +19,6 @@ Microsoft doporučuje nainstalovat také balíček `Microsoft.EntityFrameworkCor
 Pokud máte již existující databázi, můžete si usnadnit práci použitím reverse engineeringu. EF Core tak vytvoří entity a mapování z existující databáze. Výsledkem bude složka obsahující soubor `*DbContext` a soubory entit.
 
 `dontent ef dbcontext scaffold "Server=.\SQLEXPRESS;Database=SchoolDB;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o Models `
-
-## Třída DbContext
 
 ## Anotace vs. Fluent konfigurace
 Mapování je možné konfigurovat pomocí anotací v třídách entit a nebo pomocí fluent konfigurace.
@@ -94,7 +93,7 @@ Zde je ukázka jak může taková konfigurace vypadat:
 ## Konfigurace
 Do souboru `Startup.cs` metody `ConfigureServices(IServiceCollection services)` je potřeba přidat řádek `services.AddDbContext<GeneratedDbContext>;`.
 
-Konfiguraci mám uloženou v souboru `appsettings.json` (a `appsettings.Development.json` pro vývojové prostředí a obdobně pro produkci).
+Konfiguraci mám uloženou v souboru `appsettings.json` (a `appsettings.Development.json` pro vývojové prostředí). Pro produkční prostředí používám konfiguraci pomocí environment variables.
 
 ```json
 {
@@ -105,6 +104,7 @@ Konfiguraci mám uloženou v souboru `appsettings.json` (a `appsettings.Developm
   ```
 
 ## Migrace dat
+Entity framework poskytuje podporu pro migrace.
 `dotnet ef migrations`
 `dotnet ef database`
 

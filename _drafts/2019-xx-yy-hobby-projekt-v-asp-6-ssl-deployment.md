@@ -1,7 +1,7 @@
 ---
 published: false
+title: Hobby projekt v ASP.NET Core díl šestý - SSL a produkční deployment
 ---
-# Hobby projekt v ASP.NET Core díl šestý - SSL a produkční deployment
 
 - nginx reverse proxy
 - nginx companion

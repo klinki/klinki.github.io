@@ -1,6 +1,10 @@
 ---
 published: true
 title: What I have learned (17. - 23. 04. 2017)
+date: "2017-04-21"
+slug: what-i-have-learned-5
+aliases:
+    - /what-i-have-learned-5
 ---
 This time it is mostly list of interesting articles I found.
 

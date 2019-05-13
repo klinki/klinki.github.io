@@ -1,6 +1,10 @@
 ---
 published: true
 title: C++ placement new operator and memory layout
+date: "2016-06-20"
+slug: placement-new
+aliases:
+    - /placement-new
 ---
 I have discovered placement `new` operator when I worked on my Java Virtual Machine. It is useful when you need to dynamically create new instance of class and place it into already allocated memory. This is not so common scenario, but it is necessary if you want to write your own memory allocation system.
 

@@ -1,6 +1,10 @@
 ---
 published: true
 title: Useful links I found on the internet
+date: "2016-12-08"
+slug: useful-links
+aliases:
+    - /useful-links
 ---
 Here are some interesting links I found on the internet.
 

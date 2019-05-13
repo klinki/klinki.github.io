@@ -1,7 +1,11 @@
 ---
-published: false
+published: true
+title: Memory layout
+date: "2016-06-20"
+slug: memory-layout
+aliases:
+    - /memory-layout
 ---
-## Memory layout
 
 In this blog post I would like to describe memory layout and memory alignment and explain, why it is important.
 
@@ -9,8 +13,7 @@ In this blog post I would like to describe memory layout and memory alignment an
 In modern computers memory is divided into chunks called pages. On most systems, page is usually around 4 KiB. When you need to allocate some memory, operating system will allocate it to you page by page. Allocated  memory is usally rounded to whole pages, so allocating 5 KiB of memory would (mostly) end up allocating 2 pages, 8 KiB in total. It is because from CPU point of view, working with continuous memory blocks is very efficient. It can be loaded from RAM in fewer round trips and also it can be stored in CPU caches like L2.
 
 ## Words
-
-Word is the smallest amount of memory CPU can work with. On x86 systems it is usally 32 bits, on x64 systems 64 bits. When you need to work with smaller data types (char for example) CPU will have to expand it to its default word size, execute the operation and truncate the result.
+Word is the smallest amount of memory CPU can work with. On x86 systems it is usally 32 bits, on x64 systems 64 bits. When you need to work with smaller data types (`char` for example) CPU will have to expand it to its default word size, execute the operation and truncate the result.
 
 ## Memory alignment
 Most of modern C++ compilers keep data structures memory aligned to multiples of word size.

@@ -1,3 +1,9 @@
 [submodule "hugo/themes/hugo-tranquilpeak-theme"]
 	path = hugo/themes/hugo-tranquilpeak-theme
 	url = https://github.com/kakawait/hugo-tranquilpeak-theme.git
+[submodule "hugo/themes/hugo-octopress"]
+	path = hugo/themes/hugo-octopress
+	url = git@github.com:parsiya/Hugo-Octopress.git
+[submodule "hugo/themes/hugo-now"]
+	path = hugo/themes/hugo-now
+	url = git@github.com:mikeblum/hugo-now.git

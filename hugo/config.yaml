@@ -1,12 +1,21 @@
 baseURL: https://klinki.github.io/
-disablePathToLower: true
-languageCode: en
+disablePathToLower: false
+
 title: Klinki's code blog
-theme: herring-cove
+theme: mainroad
+displayauthor: false
 
 languageCode: en
 defaultContentLanguage: en
 defaultContentLanguageInSubdir: false
+
+pygmentsUseClasses: true
+pygmentsCodeFences: true
+
+disqusShortname: klinki
+googleAnalytics: UA-89466580-1
+comments: true
+
 languages:
   cs:
     contentDir: content/cs
@@ -14,10 +23,28 @@ languages:
     params:
       navigation:
         about: O mne
+    menu:
+      main:
+        - identifier: about
+          url: "/cs/o-mne"
+          name: "O mně"
+
+        - identifier: blog
+          url: "/cs/blog"
+          name: "Blog"
 
   en:
     contentDir: content/en
     languageName: English
+    menu:
+      main:
+        - identifier: about
+          url: "/about"
+          name: "About"
+
+        - identifier: blog
+          url: "/blog"
+          name: "Blog"
 
 frontmatter:
   date:
@@ -28,36 +55,44 @@ frontmatter:
     - ":filename"
     - ":default"
 
+  comments: true
+
 permalinks:
-  posts: /blog/:year/:month/:day/:slug
+  blog: /blog/:slug
   pages: /:filename
 
 params:
   navigation:
     about: About
+  description: Software Developer
+  displayauthor: false
+  sidebar:
+    home: right
+    list: right
+    single: true
+    widgets:
+      - search
+      - recent
+      - categories
+      - taglist
+      - social
+      - languages
+  mainSections:
+    - blog
+  widgets:
+    tags_counter: true
+    social:
+      twitter: klinkicz
+      linkedin: davidklingenberg
+      github: klinki
 
-pygmentsCodeFences: true
+
 # useFilenameDateAsFallback: true
-
-menu:
-  main:
-  - identifier: about
-    name: about hugo
-    pre: <i class='fa fa-heart'></i>
-    url: /about/
-    weight: -110
-
-  - identifier: blog
-    name: getting started
-    post: <span class='alert'>New!</span>
-    pre: <i class='fa fa-road'></i>
-    url: /getting-started/
-    weight: -100
 
 taxonomies:
   tag: "tags"
   category: "categories"
-  blog: "blogs"
+  blog: "posts"
 
 links:
   Home : "/"

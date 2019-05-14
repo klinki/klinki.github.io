@@ -2,6 +2,8 @@
 published: true
 date: "2017-04-28"
 slug: what-i-have-learned-6
+title: What I have learned (28. 4. 2017)
+tags: [learning]
 aliases:
     - /what-i-have-learned-6
 ---

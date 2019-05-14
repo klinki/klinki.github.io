@@ -7,3 +7,6 @@
 [submodule "hugo/themes/hugo-now"]
 	path = hugo/themes/hugo-now
 	url = git@github.com:mikeblum/hugo-now.git
+[submodule "hugo/themes/mainroad"]
+	path = hugo/themes/mainroad
+	url = https://github.com/Vimux/Mainroad/

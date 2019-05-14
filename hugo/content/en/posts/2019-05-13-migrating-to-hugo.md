@@ -1,6 +1,7 @@
 ---
 published: true
 title: Migrating to Hugo
+slug: migrating-to-hugo
 date: "2019-05-13"
 ---
 I decided to migrate my blog tu Hugo. One of the main reasons was to support multiple languages, since I decided
@@ -37,6 +38,9 @@ The less configuration it require, the better. And I don't even need anything sp
 happy with pretty much same template as I used in jekyll. I've found [hugo-now](https://github.com/mikeblum/hugo-now)
 template, but it wasn't looking good. Home page didn't show anything, links didn't work and the source code style
 was totally broken.
+
+## Code highlighting
+Turn on class highlight.
 
 ## Directory structure
 ## Layout

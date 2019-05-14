@@ -2,6 +2,7 @@
 published: true
 date: "2018-02-10"
 slug: set-up-jenkins-gitlab-merge-request-builder
+title: Set Up Jenkins Gitlab Merge Request Builder
 aliases:
     - /set-up-jenkins-gitlab-merge-request-builder
 ---

@@ -1,3 +1,6 @@
+# Hugo static files
+static
+
 _site
 .DS_Store
 .jekyll

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on Klinki&#39;s code blog</title>
+    <link>https://klinki.github.io/tags/blog/</link>
+    <description>Recent content in blog on Klinki&#39;s code blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 23 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://klinki.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jekyll issues</title>
+      <link>https://klinki.github.io/blog/jekyll-issues/</link>
+      <pubDate>Sun, 23 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/jekyll-issues/</guid>
+      <description>I&amp;rsquo;m experiencing some Jekyll related issues. I&amp;rsquo;m trying to get docker image up and running on my machine, but it doesn&amp;rsquo;t seem to work properly. Currently generated pages look differently then they look live on github pages. And also the watch mode doesn&amp;rsquo;t work and I have to restart docker container all the time, when I want to rebuild the site. I also have to delete already generated files.
+I believe these are just temporary birth issues and won&amp;rsquo;t be blocking me for long.</description>
+    </item>
+    
+    <item>
+      <title>Testing post with code</title>
+      <link>https://klinki.github.io/blog/test-code/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/test-code/</guid>
+      <description>int main(int argc, char const *argv[]) { string myString; cout &amp;lt;&amp;lt; &amp;#34;input a string: &amp;#34;; getline(cin, myString); int length = myString.length(); char charArray = new char * [length]; charArray = myString; for(int i = 0; i &amp;lt; length; ++i){ cout &amp;lt;&amp;lt; charArray[i] &amp;lt;&amp;lt; &amp;#34; &amp;#34;; } return 0; } </description>
+    </item>
+    
+    <item>
+      <title>Trying Jekyll as new blog engine</title>
+      <link>https://klinki.github.io/blog/new-blog/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/new-blog/</guid>
+      <description>I just created this blog using Jekyll and GitHub pages. I hope it was the right choice and I will be happy with Jekyll.
+I plan to write about software development in general. I&amp;rsquo;m very interested in runtime systems, so I will write something about Java and .NET soon. I also love computer science in general, so maybe I will write about some stuff I learned in school too.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -30,8 +30,7 @@ To activate that feature, do the following:
       <guid>https://klinki.github.io/blog/migrating-to-hugo/</guid>
       <description>I decided to migrate my blog tu Hugo. One of the main reasons was to support multiple languages, since I decided I want to write also in Czech from time to time.
 It hasn&amp;rsquo;t been exactly easy transition as I hoped for, but I will describe what I did and how it worked out.
-Conversion tool I tried to use
-Preserving file name One of the biggest issues I had was to preserve file name and parse date and title from it.</description>
+Conversion tool I tried to use scripts mentioned on the Hugo official documentation, but wasn&amp;rsquo;t much successful with them.</description>
     </item>
     
     <item>

@@ -30,6 +30,24 @@
     </item>
     
     <item>
+      <title>blog</title>
+      <link>https://klinki.github.io/tags/blog/</link>
+      <pubDate>Sun, 23 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aurelia</title>
+      <link>https://klinki.github.io/tags/aurelia/</link>
+      <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/tags/aurelia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>javascript</title>
       <link>https://klinki.github.io/tags/javascript/</link>
       <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
@@ -44,6 +62,15 @@
       <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://klinki.github.io/tags/typescript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>c&#43;&#43;</title>
+      <link>https://klinki.github.io/tags/c&#43;&#43;/</link>
+      <pubDate>Mon, 20 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/tags/c&#43;&#43;/</guid>
       <description></description>
     </item>
     

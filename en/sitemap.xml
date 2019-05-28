@@ -93,6 +93,12 @@
   </url>
   
   <url>
+    <loc>https://klinki.github.io/tags/blog/</loc>
+    <lastmod>2017-04-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://klinki.github.io/blog/what-i-have-learned-5/</loc>
     <lastmod>2017-04-21T00:00:00+00:00</lastmod>
   </url>
@@ -100,6 +106,12 @@
   <url>
     <loc>https://klinki.github.io/blog/aurelia-ease-of-use/</loc>
     <lastmod>2017-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/tags/aurelia/</loc>
+    <lastmod>2017-03-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -137,6 +149,12 @@
   <url>
     <loc>https://klinki.github.io/blog/memory-layout/</loc>
     <lastmod>2016-06-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/tags/c&#43;&#43;/</loc>
+    <lastmod>2016-06-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>

@@ -70,27 +70,33 @@ if (!doNotTrack) {
 
 <p>So using webhooks and after push notifications is not going to work in that case. It took me some time to figure out how to solve that issue, but I managed to do that using polling. Since it was not really easy to do so, I will show you few steps how to solve that problem.</p>
 
-<p>1) Make sure you have required Jenkins plugins installed
-- git
-- gitlab</p>
+<ol>
+<li>Make sure you have required Jenkins plugins installed</li>
+</ol>
 
-<p>2) Log into Gitlab and generate application API key in <code>User Settings</code> -&gt; <code>Access Tokens</code> section
-<img src="/images/gitlab-jenkins/gitlab-access-token.png" alt="gitlab create access token" /></p>
+<ul>
+<li>git</li>
+<li>gitlab</li>
+</ul>
 
-<p>3) Configure Jenkins gitlab plugin
+<ol>
+<li><p>Log into Gitlab and generate application API key in <code>User Settings</code> -&gt; <code>Access Tokens</code> section
+<img src="/images/gitlab-jenkins/gitlab-access-token.png" alt="gitlab create access token" /></p></li>
+
+<li><p>Configure Jenkins gitlab plugin
 <code>Jenkins</code> -&gt; <code>Manage Jenkins</code> -&gt; <code>Configure System</code> (or url <code>/configure</code>)
-<img src="/images/gitlab-jenkins/gitlab-config.png" alt="Configure jenkins gitlab" /></p>
+<img src="/images/gitlab-jenkins/gitlab-config.png" alt="Configure jenkins gitlab" /></p></li>
 
-<p>4) Create multibranch job with scheduled executions
+<li><p>Create multibranch job with scheduled executions
 Configure job to use git and do branch discovery.
-<img src="/images/gitlab-jenkins/jenkins-branch-sources.png" alt="Jenkins git configuration" /></p>
+<img src="/images/gitlab-jenkins/jenkins-branch-sources.png" alt="Jenkins git configuration" /></p></li>
 
-<p>5) Use following <code>Jenkinsfile</code> as an inspiration
-<script type="application/javascript" src="//gist.github.com/klinki/b73b4e76be460eed381a535f4e03ca14.js"></script></p>
+<li><p>Use following <code>Jenkinsfile</code> as an inspiration
+<script type="application/javascript" src="//gist.github.com/klinki/b73b4e76be460eed381a535f4e03ca14.js"></script></p></li>
+</ol>
 
 <p>Now when you run your job, you should see in log something about <code>Jenkinsfile found. Met criteria</code> for each branch containing Jenkinsfile. It should also create new jobs and fire up execution on them.</p>
-
-<pre><code> Checking branches...
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text"> Checking branches...
   Checking branch new-branch
       ‘Jenkinsfile’ found
     Met criteria
@@ -108,9 +114,7 @@ No changes detected: from-multibranch-pipeline (still at ff145f99798e3a0e650d3c5
     Does not meet criteria
 Processed 4 branches
 [Sat Feb 10 21:25:37 GMT 2018] Finished branch indexing. Indexing took 1.5 sec
-Finished: SUCCESS
-</code></pre>
-
+Finished: SUCCESS</code></pre></div>
 		</div>
 		
 	</article>
@@ -173,6 +177,9 @@ Finished: SUCCESS
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/aurelia" title="Aurelia">Aurelia (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/blog" title="Blog">Blog (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/c&#43;&#43;" title="C&#43;&#43;">C&#43;&#43; (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/git" title="Git">Git (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/javascript" title="Javascript">Javascript (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/learning" title="Learning">Learning (4)</a>

@@ -4,13 +4,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Migrating to Hugo - Klinki&#39;s code blog</title>
+	<title>blog - Klinki&#39;s code blog</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	
 	
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="alternate" type="application/rss+xml" href="/tags/blog/index.xml" title="Klinki's code blog">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
 	<link rel="stylesheet" href="/css/style.css">
 	
@@ -58,94 +59,54 @@ if (!doNotTrack) {
 		<div class="wrapper flex">
 			<div class="primary">
 			
-<main class="main" role="main">
-	<article class="post">
-		<header class="post__header">
-			<h1 class="post__title">Migrating to Hugo</h1>
-			
-		</header><div class="content post__content clearfix">
-			
-
-<p>I decided to migrate my blog tu Hugo. One of the main reasons was to support multiple languages, since I decided
-I want to write also in Czech from time to time.</p>
-
-<p>It hasn&rsquo;t been exactly easy transition as I hoped for, but I will describe what I did and how it worked out.</p>
-
-<h2 id="conversion-tool">Conversion tool</h2>
-
-<p>I tried to use scripts mentioned on the <a href="https://gohugo.io/tools/migrations/#jekyll">Hugo official documentation</a>, but wasn&rsquo;t much successful with them. I also tried <code>hugo import jekyll</code>. This one had better results. I had to modify the blog posts little bit anyway.</p>
-
-<h2 id="preserving-file-name">Preserving file name</h2>
-
-<p>One of the biggest issues I had was to preserve file name and parse date and title from it. Hugo ignores all files
-without title in frontmatter for me. I tried to configure it based on discussions, github and official documentation
-but didn&rsquo;t succeed.</p>
-
-<p>Posts must have title, slug and date filled in, it cannot be parsed from a filename. What a pitty :(</p>
-
-<h2 id="baseurl-variables-in-markdown-files">BaseUrl variables in markdown files</h2>
-
-<p>In jekyll, I had <code>{{baseUrl}}</code> variables in markdown files. I needed to get these to Hugo. It was quite a problem,
-so at the end I deleted the variables and let the browser handle URLs starting with <code>/</code> on its own. It worked quite well.</p>
-
-<h2 id="url-aliases">URL aliases</h2>
-
-<p>There was actually one thing I was very happy about. It was very simple to configure URL aliases, so old links wouldn&rsquo;t break.
-It was as easy as adding following code to frontmatter:</p>
-<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">aliases<span class="p">:</span><span class="w">
-</span><span class="w">    </span>-<span class="w"> </span>my-cool-url-alias</code></pre></div>
-<h2 id="picking-up-a-template">Picking up a template</h2>
-
-<p>Surprisingly, another big issue for me was picking a template. I had just one simple requirement: I needed it to work.
-The less configuration it require, the better. And I don&rsquo;t even need anything special, for the beginning, I would be very
-happy with pretty much same template as I used in jekyll. I&rsquo;ve found <a href="https://github.com/mikeblum/hugo-now">hugo-now</a>
-template, but it wasn&rsquo;t looking good. Home page didn&rsquo;t show anything, links didn&rsquo;t work and the source code style
-was totally broken.</p>
-
-<p>I jumped over quite a lot of other templates with more or less success after I ended up using current <a href="https://github.com/Vimux/Mainroad/">Mainroad theme</a>.</p>
-
-<h2 id="code-highlighting">Code highlighting</h2>
-
-<p>I still have issues with turning on code higlighting, so this is one of the areas I need to work on.</p>
-
-<h2 id="deployment">Deployment</h2>
-
-<p>There is another major change after migration to Hugo. It requires deployemt. Previosly, jekyll was natively supported by Github pages.
-Now, hugo is not, so I had to set up travis-ci job to build it and deploy new changes. Luckily there are quite few articles how to do that. I used similar approach as is described on this blog post: <a href="https://www.sidorenko.io/post/2018/12/hugo-on-github-pages-with-travis-ci/">https://www.sidorenko.io/post/2018/12/hugo-on-github-pages-with-travis-ci/</a>.</p>
-
-		</div>
+<main class="main list" role="main">
+	<header class="main__header">
+		<h1 class="main__title">blog</h1>
+	</header><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/blog/jekyll-issues/" rel="bookmark">
+			Jekyll issues
+			</a>
+		</h3>
 		
-	</article>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		I&rsquo;m experiencing some Jekyll related issues. I&rsquo;m trying to get docker image up and running on my machine, but it doesn&rsquo;t seem to work properly. Currently generated pages look differently then they look live on github pages. And also the watch mode doesn&rsquo;t work and I have to restart docker container all the time, when I want to rebuild the site. I also have to delete already generated files.
+I believe these are just temporary birth issues and won&rsquo;t be blocking me for long.
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/blog/test-code/" rel="bookmark">
+			Testing post with code
+			</a>
+		</h3>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		int main(int argc, char const *argv[]) { string myString; cout &lt;&lt; &#34;input a string: &#34;; getline(cin, myString); int length = myString.length(); char charArray = new char * [length]; charArray = myString; for(int i = 0; i &lt; length; ++i){ cout &lt;&lt; charArray[i] &lt;&lt; &#34; &#34;; } return 0; } 
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/blog/new-blog/" rel="bookmark">
+			Trying Jekyll as new blog engine
+			</a>
+		</h3>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		I just created this blog using Jekyll and GitHub pages. I hope it was the right choice and I will be happy with Jekyll.
+I plan to write about software development in general. I&rsquo;m very interested in runtime systems, so I will write something about Java and .NET soon. I also love computer science in general, so maybe I will write about some stuff I learned in school too.
+	</div>
+</article>
 </main>
 
 
-
-<section class="comments">
-	<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "klinki" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>
-
-
 			</div>
-			<aside class="sidebar"><div class="widget-search widget">
+			
+<aside class="sidebar"><div class="widget-search widget">
 	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
 		<label>
 			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">

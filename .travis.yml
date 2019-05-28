@@ -1,0 +1,13 @@
+language: minimal
+services:
+  - docker
+
+script:
+  - docker-compose up build
+
+deploy:
+  - provider: script
+    script: bash ./.scripts/deploy.sh
+    skip_cleanup: true
+    on:
+      branch: source # or master if you are using the two-repository approach

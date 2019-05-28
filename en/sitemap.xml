@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://klinki.github.io/blog/</loc>
+    <lastmod>2019-05-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cs"
+                href="https://klinki.github.io/cs/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://klinki.github.io/blog/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/blog/chrome-js-debugging/</loc>
+    <lastmod>2019-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/</loc>
+    <lastmod>2019-05-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cs"
+                href="https://klinki.github.io/cs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://klinki.github.io/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/blog/migrating-to-hugo/</loc>
+    <lastmod>2019-05-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/blog/set-up-jenkins-gitlab-merge-request-builder/</loc>
+    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/blog/git-tips/</loc>
+    <lastmod>2018-02-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/tags/</loc>
+    <lastmod>2018-02-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cs"
+                href="https://klinki.github.io/cs/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://klinki.github.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/tags/git/</loc>
+    <lastmod>2018-02-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/blog/what-i-have-learned-6/</loc>
+    <lastmod>2017-04-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/tags/learning/</loc>
+    <lastmod>2017-04-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/blog/jekyll-issues/</loc>
+    <lastmod>2017-04-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/blog/what-i-have-learned-5/</loc>
+    <lastmod>2017-04-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/blog/aurelia-ease-of-use/</loc>
+    <lastmod>2017-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/tags/javascript/</loc>
+    <lastmod>2017-03-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/tags/typescript/</loc>
+    <lastmod>2017-03-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/blog/what-i-have-learned-3/</loc>
+    <lastmod>2017-03-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/blog/what-i-have-learned-1/</loc>
+    <lastmod>2017-02-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/blog/useful-links/</loc>
+    <lastmod>2016-12-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/blog/placement-new/</loc>
+    <lastmod>2016-06-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/blog/memory-layout/</loc>
+    <lastmod>2016-06-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/blog/test-code/</loc>
+    <lastmod>2016-06-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/blog/new-blog/</loc>
+    <lastmod>2016-06-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/drafts/2019-04-14-hobby-projekt-v-asp-2-ef-core/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/about/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cs"
+                href="https://klinki.github.io/cs/o-mne/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://klinki.github.io/about/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/categories/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cs"
+                href="https://klinki.github.io/cs/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://klinki.github.io/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/drafts/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/pages/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cs"
+                href="https://klinki.github.io/cs/pages/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://klinki.github.io/pages/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/posts/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cs"
+                href="https://klinki.github.io/cs/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://klinki.github.io/posts/"
+                />
+  </url>
+  
+</urlset>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Klinki&#39;s code blog</title>
+    <link>https://klinki.github.io/cs/pages/</link>
+    <description>Recent content in Pages on Klinki&#39;s code blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://klinki.github.io/cs/pages/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>O mne</title>
+      <link>https://klinki.github.io/cs/o-mne/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/cs/o-mne/</guid>
+      <description>Jmenuji se David Klingenberg a jsem softwarový vývojář. Mám rád Computer Science a nebojím se low level programování. I got my hands dirty even on some Assembly code.
+Můj nejoblíběnější programovací jazyk je C#, ale také mám rád C++. Rád programuji v různých programovacích jazycích, viceméně od C až po Smalltalk. Momentálně profesionálně pracuji s TypeScriptem, JavaScriptem a Javou.
+Jsem fanoušek Open Source.
+Pracovní zkušenosti Mám profesionální pracovní zkušenosti s těmito jazyky a frameworky:</description>
+    </item>
+    
+  </channel>
+</rss>

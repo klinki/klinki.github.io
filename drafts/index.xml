@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Drafts on Klinki&#39;s code blog</title>
+    <link>https://klinki.github.io/drafts/</link>
+    <description>Recent content in Drafts on Klinki&#39;s code blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://klinki.github.io/drafts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://klinki.github.io/drafts/2019-04-14-hobby-projekt-v-asp-2-ef-core/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/drafts/2019-04-14-hobby-projekt-v-asp-2-ef-core/</guid>
+      <description>Hobby projekt v ASP.NET Core díl druhý - EF Core Na samotném začátku projektu jsem přemýšlel, jaký zvolit ORM framework (a pokud vůbec nějaký používat). Mám rád čistou architekturu a chtěl jsem si vyzkoušet jak se dělá aplikace respektující tyto zásady v ASP.NETu. Jeden z mých hlavních požadavků na ORM knihovnu byl, aby se dala co nejsnáze odizolovat od doménových entit. Zjistil jsem, že tuto podmínku EF.Core celkem dobře splňuje (hlavně díky fluent konfiguraci) a tak jsem se rozhodl ho vyzkoušet.</description>
+    </item>
+    
+  </channel>
+</rss>

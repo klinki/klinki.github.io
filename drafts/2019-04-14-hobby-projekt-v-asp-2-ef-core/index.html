@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title> - Klinki&#39;s code blog</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	
+	
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-89466580-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Klinki&#39;s code blog" rel="home">
+				<div class="logo__title">Klinki&#39;s code blog</div>
+				
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/about">About</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/blog">Blog</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title"></h1>
+			
+		</header><div class="content post__content clearfix">
+			
+
+<h1 id="hobby-projekt-v-asp-net-core-díl-druhý-ef-core">Hobby projekt v ASP.NET Core díl druhý - EF Core</h1>
+
+<p>Na samotném začátku projektu jsem přemýšlel, jaký zvolit ORM framework (a pokud vůbec nějaký používat). Mám rád <a href="http://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html">čistou architekturu</a> a chtěl jsem si vyzkoušet jak se dělá aplikace respektující tyto zásady v ASP.NETu. Jeden z mých hlavních požadavků na ORM knihovnu byl, aby se dala co nejsnáze odizolovat od doménových entit. Zjistil jsem, že tuto podmínku EF.Core celkem dobře splňuje (hlavně díky fluent konfiguraci) a tak jsem se rozhodl ho vyzkoušet.</p>
+
+<h2 id="instalace-ef-core-as-db-provideru">Instalace EF.Core as DB provideru</h2>
+
+<p>Prvním krokem byla instalace nuget balíčků <code>MySql.Data.EntityFrameworkCore</code> a příslušného databázového provideru, v mém případě <code>Pomelo.EntityFrameworkCore.MySql</code>.
+Microsoft doporučuje nainstalovat také balíček <code>Microsoft.EntityFrameworkCore.Relational</code>. Ten by sice měl být nainstalovaný spolu s DB providerem, ale je lepší ho uvést jako přímou závslost, tak se k vám dostanou nejnovější verze nezávisle na poskytovateli DB provideru.</p>
+
+<p><code>Microsoft.EntityFrameworkCore.Tools.DotNet</code></p>
+
+<h2 id="příkazová-řádka">Příkazová řádka</h2>
+
+<p><code>dotnet ef</code></p>
+
+<h2 id="reverse-engineering">Reverse Engineering</h2>
+
+<p>Pokud máte již existující databázi, můžete si usnadnit práci použitím reverse engineeringu. EF Core tak vytvoří entity a mapování z existující databáze. Výsledkem bude složka obsahující soubor <code>*DbContext</code> a soubory entit.</p>
+
+<p><code>dontent ef dbcontext scaffold &quot;Server=.\SQLEXPRESS;Database=SchoolDB;Trusted_Connection=True;&quot; Microsoft.EntityFrameworkCore.SqlServer -o Models</code></p>
+
+<h2 id="třída-dbcontext">Třída DbContext</h2>
+
+<h2 id="anotace-vs-fluent-konfigurace">Anotace vs. Fluent konfigurace</h2>
+
+<p>Mapování je možné konfigurovat pomocí anotací v třídách entit a nebo pomocí fluent konfigurace.</p>
+
+<p>Fluent konfigurace je vhodnější protože je oddělená nezasahuje do doménových tříd. Pokud použijete rerverse engineering a vygenerujete entity z existující databáze, framework použije právě fluent konfiguraci. Ve výchozí konfiguraci vygeneruje jeden velký <code>DbContext</code> soubor, který bude obsahovat veškeré mapování pro všechny tabulky. Takto vygenerovaný soubor je velice velký a poměrně nepřehledný a tak jsem se rozhodl ho rozsekat na menší soubory s konfiguracemi pro jednotlivé entity.</p>
+
+<p>Zde je ukázka jak může taková konfigurace vypadat:</p>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp">    <span class="k">public</span> <span class="k">class</span> <span class="nc">UserConfiguration</span> <span class="p">:</span> <span class="n">IEntityTypeConfiguration</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="n">Configure</span><span class="p">(</span><span class="n">EntityTypeBuilder</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;</span> <span class="n">builder</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">builder</span><span class="p">.</span><span class="n">ToTable</span><span class="p">(</span><span class="s">&#34;user&#34;</span><span class="p">);</span>
+
+            <span class="n">builder</span><span class="p">.</span><span class="n">Property</span><span class="p">(</span><span class="n">e</span> <span class="p">=&gt;</span> <span class="n">e</span><span class="p">.</span><span class="n">Id</span><span class="p">)</span>
+                <span class="p">.</span><span class="n">HasColumnName</span><span class="p">(</span><span class="s">&#34;id&#34;</span><span class="p">)</span>
+                <span class="p">.</span><span class="n">HasColumnType</span><span class="p">(</span><span class="s">&#34;int(11)&#34;</span><span class="p">)</span>
+                <span class="p">.</span><span class="n">ValueGeneratedOnAdd</span><span class="p">();</span>
+
+            <span class="n">builder</span><span class="p">.</span><span class="n">Property</span><span class="p">(</span><span class="n">e</span> <span class="p">=&gt;</span> <span class="n">e</span><span class="p">.</span><span class="n">Email</span><span class="p">)</span>
+                <span class="p">.</span><span class="n">IsRequired</span><span class="p">()</span>
+                <span class="p">.</span><span class="n">HasColumnName</span><span class="p">(</span><span class="s">&#34;email&#34;</span><span class="p">)</span>
+                <span class="p">.</span><span class="n">HasColumnType</span><span class="p">(</span><span class="s">&#34;varchar(255)&#34;</span><span class="p">);</span>
+
+            <span class="n">builder</span><span class="p">.</span><span class="n">Property</span><span class="p">(</span><span class="n">e</span> <span class="p">=&gt;</span> <span class="n">e</span><span class="p">.</span><span class="n">PasswordHash</span><span class="p">)</span>
+                <span class="p">.</span><span class="n">IsRequired</span><span class="p">()</span>
+                <span class="p">.</span><span class="n">HasColumnType</span><span class="p">(</span><span class="s">&#34;varchar(255)&#34;</span><span class="p">);</span>
+
+            <span class="n">builder</span><span class="p">.</span><span class="n">Property</span><span class="p">(</span><span class="n">e</span> <span class="p">=&gt;</span> <span class="n">e</span><span class="p">.</span><span class="n">RegisteredAt</span><span class="p">)</span>
+                <span class="p">.</span><span class="n">HasColumnName</span><span class="p">(</span><span class="s">&#34;registered_at&#34;</span><span class="p">)</span>
+                <span class="p">.</span><span class="n">HasColumnType</span><span class="p">(</span><span class="s">&#34;datetime&#34;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp">    <span class="k">public</span> <span class="k">partial</span> <span class="k">class</span> <span class="nc">GeneratedDbContext</span> <span class="p">:</span> <span class="n">IdentityDbContext</span><span class="p">&lt;</span><span class="n">User</span><span class="p">,</span> <span class="n">Role</span><span class="p">,</span> <span class="kt">int</span><span class="p">&gt;</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="n">IConfiguration</span> <span class="n">Configuration</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="p">}</span>
+
+        <span class="k">public</span> <span class="n">GeneratedDbContext</span><span class="p">()</span>
+        <span class="p">{</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="n">GeneratedDbContext</span><span class="p">(</span><span class="n">DbContextOptions</span><span class="p">&lt;</span><span class="n">GeneratedDbContext</span><span class="p">&gt;</span> <span class="n">options</span><span class="p">,</span> <span class="n">IConfiguration</span> <span class="n">configuration</span><span class="p">)</span>
+            <span class="p">:</span> <span class="k">base</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Configuration</span> <span class="p">=</span> <span class="n">configuration</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">virtual</span> <span class="n">DbSet</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;</span> <span class="n">User</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+        <span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="n">OnConfiguring</span><span class="p">(</span><span class="n">DbContextOptionsBuilder</span> <span class="n">optionsBuilder</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(!</span><span class="n">optionsBuilder</span><span class="p">.</span><span class="n">IsConfigured</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">optionsBuilder</span><span class="p">.</span><span class="n">UseMySql</span><span class="p">(</span><span class="n">Configuration</span><span class="p">.</span><span class="n">GetConnectionString</span><span class="p">(</span><span class="s">&#34;MySQLContext&#34;</span><span class="p">),</span> <span class="n">mysqlOptions</span> <span class="p">=&gt;</span> <span class="p">{</span>
+
+                <span class="p">});</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="n">OnModelCreating</span><span class="p">(</span><span class="n">ModelBuilder</span> <span class="n">modelBuilder</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">base</span><span class="p">.</span><span class="n">OnModelCreating</span><span class="p">(</span><span class="n">modelBuilder</span><span class="p">);</span>
+            <span class="c1">// Načte všechny třídy implementující z assembly
+</span><span class="c1"></span>            <span class="n">modelBuilder</span><span class="p">.</span><span class="n">ApplyConfigurationsFromAssembly</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">GeneratedDbContext</span><span class="p">).</span><span class="n">Assembly</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
+<h2 id="konfigurace">Konfigurace</h2>
+
+<p>Do souboru <code>Startup.cs</code> metody <code>ConfigureServices(IServiceCollection services)</code> je potřeba přidat řádek <code>services.AddDbContext&lt;GeneratedDbContext&gt;;</code>.</p>
+
+<p>Konfiguraci mám uloženou v souboru <code>appsettings.json</code> (a <code>appsettings.Development.json</code> pro vývojové prostředí a obdobně pro produkci).</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;ConnectionStrings&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;MySQLContext&#34;</span><span class="p">:</span> <span class="s2">&#34;Server=localhost;port=3306;user=app;password=password;Database=app;GuidFormat=None&#34;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+<h2 id="migrace-dat">Migrace dat</h2>
+
+<p><code>dotnet ef migrations</code>
+<code>dotnet ef database</code></p>
+
+<h2 id="zdroje">Zdroje</h2>
+
+<p><a href="https://www.entityframeworktutorial.net/efcore/entity-framework-core.aspx">Entity Framework Tutorial</a></p>
+
+		</div>
+		
+	</article>
+</main>
+
+
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "klinki" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://klinki.github.io/" />
+	</form>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/blog/chrome-js-debugging/">Chrome JavaScript debugging</a></li>
+			<li class="widget__item"><a class="widget__link" href="/blog/migrating-to-hugo/">Migrating to Hugo</a></li>
+			<li class="widget__item"><a class="widget__link" href="/blog/set-up-jenkins-gitlab-merge-request-builder/">Set Up Jenkins Gitlab Merge Request Builder</a></li>
+			<li class="widget__item"><a class="widget__link" href="/blog/git-tips/">Git tips</a></li>
+			<li class="widget__item"><a class="widget__link" href="/blog/what-i-have-learned-6/">What I have learned (28. 4. 2017)</a></li>
+			<li class="widget__item"><a class="widget__link" href="/blog/jekyll-issues/">Jekyll issues</a></li>
+			<li class="widget__item"><a class="widget__link" href="/blog/what-i-have-learned-5/">What I have learned (17. - 23. 04. 2017)</a></li>
+			<li class="widget__item"><a class="widget__link" href="/blog/aurelia-ease-of-use/">Aurelia ease of use</a></li>
+			<li class="widget__item"><a class="widget__link" href="/blog/what-i-have-learned-3/">What I have learned this week (06. - 12. 03. 2017)</a></li>
+			<li class="widget__item"><a class="widget__link" href="/blog/what-i-have-learned-1/">What I have learned this week (06. - 12. 02. 2017)</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/git" title="Git">Git (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/javascript" title="Javascript">Javascript (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/learning" title="Learning">Learning (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/typescript" title="Typescript">Typescript (1)</a>
+	</div>
+</div>
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">Social</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Twitter" rel="noopener noreferrer" href="https://twitter.com/klinkicz" target="_blank">
+				<svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
+				<span>Twitter</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="LinkedIn" rel="noopener noreferrer" href="https://linkedin.com/in/davidklingenberg" target="_blank">
+				<svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
+				<span>LinkedIn</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/klinki" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="widget-languages widget">
+	<h4 class="widget__title">Languages</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget-languages__link widget__link" href="/">
+					<span class="widget-languages__link-btn widget__link-btn btn">EN</span>
+					<span class="widget-languages__link-text widget__link-text">English</span>
+				</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget-languages__link widget__link" href="/cs/">
+					<span class="widget-languages__link-btn widget__link-btn btn">CS</span>
+					<span class="widget-languages__link-text widget__link-text">Čeština</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</aside>
+
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2019 Klinki&#39;s code blog.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script></body>
+</html>

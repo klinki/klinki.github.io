@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>typescript on Klinki&#39;s code blog</title>
+    <link>https://klinki.github.io/tags/typescript/</link>
+    <description>Recent content in typescript on Klinki&#39;s code blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 Mar 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://klinki.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Aurelia ease of use</title>
+      <link>https://klinki.github.io/blog/aurelia-ease-of-use/</link>
+      <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/aurelia-ease-of-use/</guid>
+      <description>On my last project I had a chance to work with Aurelia. I needed to use some frontend framework capable of being easily used with existing server rendered application. This single requirement automatically crossed out Angular, so I had to look for some alternative. Since I knew little bit about Aurelia and I found out it is easily embeddable ito existing app, I decided to use it.
+I think it was right decision and it has been quite pleasant to work with Aurelia.</description>
+    </item>
+    
+  </channel>
+</rss>

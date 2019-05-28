@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>learning on Klinki&#39;s code blog</title>
+    <link>https://klinki.github.io/tags/learning/</link>
+    <description>Recent content in learning on Klinki&#39;s code blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 28 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://klinki.github.io/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What I have learned (28. 4. 2017)</title>
+      <link>https://klinki.github.io/blog/what-i-have-learned-6/</link>
+      <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/what-i-have-learned-6/</guid>
+      <description> Aurelia  Video: Aurelia: Next Generation Web Apps by Ashley M Grant - Great video explaining basics of Aurelia  Vue.js  VueJS Router - Documentation of VueJS router. It seems like the only Router in current JS frameworks I know, which supports components being really fully decoupled from it. Huge thumbs up for Vue for that! I&amp;rsquo;ve been blaming Angular for not having it for while&amp;hellip;  Git  git - the simple guide - Nice git guide for beginners  Other  Good UI  </description>
+    </item>
+    
+    <item>
+      <title>What I have learned (17. - 23. 04. 2017)</title>
+      <link>https://klinki.github.io/blog/what-i-have-learned-5/</link>
+      <pubDate>Fri, 21 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/what-i-have-learned-5/</guid>
+      <description>This time it is mostly list of interesting articles I found.
+Interesting articles TypeScript  TypeScript at Slack - how Slack moved to TypeScript Glimmer.js: What’s the Deal with TypeScript? - Article describing what TypeScript is about It’s time to give TypeScript another chance - Yet another article about TypeScript :) Rich Typescript Logger Decorators for Easy Coding - Great TypeScript decorator for simple logging Decorators &amp;amp; metadata reflection in TypeScript: From Novice to Expert - Article series focused on TypeScript decorators  Angular  Automagically Unsubscribe in Angular - Decorator for automatically unsubscribing Observables Angular — Stop using observable when you should use a promise - Article about caveats of overusing Observables especially for HTTP requests ngConf2017 Information - Links to videos, slides and information about ngConf2017  CSS  http://cssgridgarden.</description>
+    </item>
+    
+    <item>
+      <title>What I have learned this week (06. - 12. 03. 2017)</title>
+      <link>https://klinki.github.io/blog/what-i-have-learned-3/</link>
+      <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/what-i-have-learned-3/</guid>
+      <description>Properly commenting workarounds Sometimes you need to do some workaround - maybe because of some bug, or lack of features in framework you use&amp;hellip; There might be many reasons for it. It is necessary to properly document such a workaround and describe reasons why you used it.
+It might seem obvious at the beginning, but when you return to that code after some time, you might not understand it rigt away.</description>
+    </item>
+    
+    <item>
+      <title>What I have learned this week (06. - 12. 02. 2017)</title>
+      <link>https://klinki.github.io/blog/what-i-have-learned-1/</link>
+      <pubDate>Mon, 06 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/what-i-have-learned-1/</guid>
+      <description> This is the first article of &amp;ldquo;What I have learned series&amp;rdquo; I would like to start. I would like to write weekly (even though I&amp;rsquo;m not sure if I will have enough time for that). I will try to post interesting things I learned in that week and also some articles I read.
+Java  Java streams cannot be reused  CSS  A Complete Guide to Flexbox - flexible CSS positioning  GIT  Break up changes into multiple git commits with git add -p  </description>
+    </item>
+    
+  </channel>
+</rss>

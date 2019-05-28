@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.55.6" />
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Klinki&#39;s code blog</title>
+	<title>Pages - Klinki&#39;s code blog</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Software Developer">
+	<meta name="description" content="">
 	
 	
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="alternate" type="application/rss+xml" href="/index.xml" title="Klinki's code blog">
+	<link rel="alternate" type="application/rss+xml" href="/pages/index.xml" title="Klinki's code blog">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
 	<link rel="stylesheet" href="/css/style.css">
 	
@@ -61,150 +60,28 @@ if (!doNotTrack) {
 			<div class="primary">
 			
 <main class="main list" role="main">
-	<article class="list__item post">
+	<header class="main__header">
+		<h1 class="main__title">Pages</h1>
+	</header><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
-			<a href="/blog/chrome-js-debugging/" rel="bookmark">
-			Chrome JavaScript debugging
+			<a href="/about/" rel="bookmark">
+			About
 			</a>
 		</h3>
 		
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		Ignoring external libraries Chrome debugger allows you to ignore library code and do the stepping only on your custom code.
-To activate that feature, do the following:
- Open dev tools Click on three dots menu on the right side Select Settings from the menu and find Blackboxing Check the Blackbox content scripts checkbox and add a pattern using Add pattern button. (I usually use that with node_modules as a pattern).
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/blog/migrating-to-hugo/" rel="bookmark">
-			Migrating to Hugo
-			</a>
-		</h3>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		I decided to migrate my blog tu Hugo. One of the main reasons was to support multiple languages, since I decided I want to write also in Czech from time to time.
-It hasn&rsquo;t been exactly easy transition as I hoped for, but I will describe what I did and how it worked out.
-Conversion tool I tried to use
-Preserving file name One of the biggest issues I had was to preserve file name and parse date and title from it.
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/blog/set-up-jenkins-gitlab-merge-request-builder/" rel="bookmark">
-			Set Up Jenkins Gitlab Merge Request Builder
-			</a>
-		</h3>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		In my current work we use self hosted Gitlab CE instance and Jenkins CI. We wanted to set up some integration between Gitlab and Jenkins to would build merge requests for us.
-There are quite a lot of articles on the internet on that topic, but we had one major problem - our self hosted Jenkins is on private network, while Gitlab is on different, public, network.
-So using webhooks and after push notifications is not going to work in that case.
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/blog/git-tips/" rel="bookmark">
-			Git tips
-			</a>
-		</h3>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		In this post, I would like to explain some tips on successful git workflow.
-Feature branches Feature branches is very common and I think one of most important concepts of successful git workflow. Before you start working on new feature, create a new branch for it based on latest master. Then commit all work into this feature branch. If master changes and feature branch gets outdated, rebase it to current master (it is safe to do so with your private branch, but be careful when working with shared branches).
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/blog/what-i-have-learned-6/" rel="bookmark">
-			What I have learned (28. 4. 2017)
-			</a>
-		</h3>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		 Aurelia  Video: Aurelia: Next Generation Web Apps by Ashley M Grant - Great video explaining basics of Aurelia  Vue.js  VueJS Router - Documentation of VueJS router. It seems like the only Router in current JS frameworks I know, which supports components being really fully decoupled from it. Huge thumbs up for Vue for that! I&rsquo;ve been blaming Angular for not having it for while&hellip;  Git  git - the simple guide - Nice git guide for beginners  Other  Good UI  
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/blog/jekyll-issues/" rel="bookmark">
-			Jekyll issues
-			</a>
-		</h3>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		I&rsquo;m experiencing some Jekyll related issues. I&rsquo;m trying to get docker image up and running on my machine, but it doesn&rsquo;t seem to work properly. Currently generated pages look differently then they look live on github pages. And also the watch mode doesn&rsquo;t work and I have to restart docker container all the time, when I want to rebuild the site. I also have to delete already generated files.
-I believe these are just temporary birth issues and won&rsquo;t be blocking me for long.
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/blog/what-i-have-learned-5/" rel="bookmark">
-			What I have learned (17. - 23. 04. 2017)
-			</a>
-		</h3>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		This time it is mostly list of interesting articles I found.
-Interesting articles TypeScript  TypeScript at Slack - how Slack moved to TypeScript Glimmer.js: What’s the Deal with TypeScript? - Article describing what TypeScript is about It’s time to give TypeScript another chance - Yet another article about TypeScript :) Rich Typescript Logger Decorators for Easy Coding - Great TypeScript decorator for simple logging Decorators &amp; metadata reflection in TypeScript: From Novice to Expert - Article series focused on TypeScript decorators  Angular  Automagically Unsubscribe in Angular - Decorator for automatically unsubscribing Observables Angular — Stop using observable when you should use a promise - Article about caveats of overusing Observables especially for HTTP requests ngConf2017 Information - Links to videos, slides and information about ngConf2017  CSS  http://cssgridgarden.
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/blog/aurelia-ease-of-use/" rel="bookmark">
-			Aurelia ease of use
-			</a>
-		</h3>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		On my last project I had a chance to work with Aurelia. I needed to use some frontend framework capable of being easily used with existing server rendered application. This single requirement automatically crossed out Angular, so I had to look for some alternative. Since I knew little bit about Aurelia and I found out it is easily embeddable ito existing app, I decided to use it.
-I think it was right decision and it has been quite pleasant to work with Aurelia.
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/blog/what-i-have-learned-3/" rel="bookmark">
-			What I have learned this week (06. - 12. 03. 2017)
-			</a>
-		</h3>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Properly commenting workarounds Sometimes you need to do some workaround - maybe because of some bug, or lack of features in framework you use&hellip; There might be many reasons for it. It is necessary to properly document such a workaround and describe reasons why you used it.
-It might seem obvious at the beginning, but when you return to that code after some time, you might not understand it rigt away.
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/blog/what-i-have-learned-1/" rel="bookmark">
-			What I have learned this week (06. - 12. 02. 2017)
-			</a>
-		</h3>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		 This is the first article of &ldquo;What I have learned series&rdquo; I would like to start. I would like to write weekly (even though I&rsquo;m not sure if I will have enough time for that). I will try to post interesting things I learned in that week and also some articles I read.
-Java  Java streams cannot be reused  CSS  A Complete Guide to Flexbox - flexible CSS positioning  GIT  Break up changes into multiple git commits with git add -p  
+		My name is David Klingenberg and I&rsquo;m a Software Developer. I love Computer Science and I&rsquo;m not afraid of low level programming. I got my hands dirty even on some Assembly code.
+My favourite programming language is C#, but I also love C++. I like to program in all different kinds of programming languages in general, basically from C to Smalltalk :) Currently I&rsquo;m profesionally working with TypeScript, JavaScript and Java.
 	</div>
 </article>
 </main>
 
-<div class="pagination">
-	<span class="pagination__item pagination__item--current">1/2</span>
-	<a class="pagination__item pagination__item--next btn" href="/page/2/">»</a>
-</div>
-
 
 			</div>
-			<aside class="sidebar"><div class="widget-search widget">
+			
+<aside class="sidebar"><div class="widget-search widget">
 	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
 		<label>
 			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">

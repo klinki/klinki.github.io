@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Klinki&#39;s code blog</title>
+    <link>https://klinki.github.io/</link>
+    <description>Recent content on Klinki&#39;s code blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 23 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://klinki.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Chrome JavaScript debugging</title>
+      <link>https://klinki.github.io/blog/chrome-js-debugging/</link>
+      <pubDate>Thu, 23 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/chrome-js-debugging/</guid>
+      <description>Ignoring external libraries Chrome debugger allows you to ignore library code and do the stepping only on your custom code.
+To activate that feature, do the following:
+ Open dev tools Click on three dots menu on the right side Select Settings from the menu and find Blackboxing Check the Blackbox content scripts checkbox and add a pattern using Add pattern button. (I usually use that with node_modules as a pattern).</description>
+    </item>
+    
+    <item>
+      <title>Migrating to Hugo</title>
+      <link>https://klinki.github.io/blog/migrating-to-hugo/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/migrating-to-hugo/</guid>
+      <description>I decided to migrate my blog tu Hugo. One of the main reasons was to support multiple languages, since I decided I want to write also in Czech from time to time.
+It hasn&amp;rsquo;t been exactly easy transition as I hoped for, but I will describe what I did and how it worked out.
+Conversion tool I tried to use
+Preserving file name One of the biggest issues I had was to preserve file name and parse date and title from it.</description>
+    </item>
+    
+    <item>
+      <title>Set Up Jenkins Gitlab Merge Request Builder</title>
+      <link>https://klinki.github.io/blog/set-up-jenkins-gitlab-merge-request-builder/</link>
+      <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/set-up-jenkins-gitlab-merge-request-builder/</guid>
+      <description>In my current work we use self hosted Gitlab CE instance and Jenkins CI. We wanted to set up some integration between Gitlab and Jenkins to would build merge requests for us.
+There are quite a lot of articles on the internet on that topic, but we had one major problem - our self hosted Jenkins is on private network, while Gitlab is on different, public, network.
+So using webhooks and after push notifications is not going to work in that case.</description>
+    </item>
+    
+    <item>
+      <title>Git tips</title>
+      <link>https://klinki.github.io/blog/git-tips/</link>
+      <pubDate>Sun, 04 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/git-tips/</guid>
+      <description>In this post, I would like to explain some tips on successful git workflow.
+Feature branches Feature branches is very common and I think one of most important concepts of successful git workflow. Before you start working on new feature, create a new branch for it based on latest master. Then commit all work into this feature branch. If master changes and feature branch gets outdated, rebase it to current master (it is safe to do so with your private branch, but be careful when working with shared branches).</description>
+    </item>
+    
+    <item>
+      <title>What I have learned (28. 4. 2017)</title>
+      <link>https://klinki.github.io/blog/what-i-have-learned-6/</link>
+      <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/what-i-have-learned-6/</guid>
+      <description> Aurelia  Video: Aurelia: Next Generation Web Apps by Ashley M Grant - Great video explaining basics of Aurelia  Vue.js  VueJS Router - Documentation of VueJS router. It seems like the only Router in current JS frameworks I know, which supports components being really fully decoupled from it. Huge thumbs up for Vue for that! I&amp;rsquo;ve been blaming Angular for not having it for while&amp;hellip;  Git  git - the simple guide - Nice git guide for beginners  Other  Good UI  </description>
+    </item>
+    
+    <item>
+      <title>Jekyll issues</title>
+      <link>https://klinki.github.io/blog/jekyll-issues/</link>
+      <pubDate>Sun, 23 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/jekyll-issues/</guid>
+      <description>I&amp;rsquo;m experiencing some Jekyll related issues. I&amp;rsquo;m trying to get docker image up and running on my machine, but it doesn&amp;rsquo;t seem to work properly. Currently generated pages look differently then they look live on github pages. And also the watch mode doesn&amp;rsquo;t work and I have to restart docker container all the time, when I want to rebuild the site. I also have to delete already generated files.
+I believe these are just temporary birth issues and won&amp;rsquo;t be blocking me for long.</description>
+    </item>
+    
+    <item>
+      <title>What I have learned (17. - 23. 04. 2017)</title>
+      <link>https://klinki.github.io/blog/what-i-have-learned-5/</link>
+      <pubDate>Fri, 21 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/what-i-have-learned-5/</guid>
+      <description>This time it is mostly list of interesting articles I found.
+Interesting articles TypeScript  TypeScript at Slack - how Slack moved to TypeScript Glimmer.js: What’s the Deal with TypeScript? - Article describing what TypeScript is about It’s time to give TypeScript another chance - Yet another article about TypeScript :) Rich Typescript Logger Decorators for Easy Coding - Great TypeScript decorator for simple logging Decorators &amp;amp; metadata reflection in TypeScript: From Novice to Expert - Article series focused on TypeScript decorators  Angular  Automagically Unsubscribe in Angular - Decorator for automatically unsubscribing Observables Angular — Stop using observable when you should use a promise - Article about caveats of overusing Observables especially for HTTP requests ngConf2017 Information - Links to videos, slides and information about ngConf2017  CSS  http://cssgridgarden.</description>
+    </item>
+    
+    <item>
+      <title>Aurelia ease of use</title>
+      <link>https://klinki.github.io/blog/aurelia-ease-of-use/</link>
+      <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/aurelia-ease-of-use/</guid>
+      <description>On my last project I had a chance to work with Aurelia. I needed to use some frontend framework capable of being easily used with existing server rendered application. This single requirement automatically crossed out Angular, so I had to look for some alternative. Since I knew little bit about Aurelia and I found out it is easily embeddable ito existing app, I decided to use it.
+I think it was right decision and it has been quite pleasant to work with Aurelia.</description>
+    </item>
+    
+    <item>
+      <title>What I have learned this week (06. - 12. 03. 2017)</title>
+      <link>https://klinki.github.io/blog/what-i-have-learned-3/</link>
+      <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/what-i-have-learned-3/</guid>
+      <description>Properly commenting workarounds Sometimes you need to do some workaround - maybe because of some bug, or lack of features in framework you use&amp;hellip; There might be many reasons for it. It is necessary to properly document such a workaround and describe reasons why you used it.
+It might seem obvious at the beginning, but when you return to that code after some time, you might not understand it rigt away.</description>
+    </item>
+    
+    <item>
+      <title>What I have learned this week (06. - 12. 02. 2017)</title>
+      <link>https://klinki.github.io/blog/what-i-have-learned-1/</link>
+      <pubDate>Mon, 06 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/what-i-have-learned-1/</guid>
+      <description> This is the first article of &amp;ldquo;What I have learned series&amp;rdquo; I would like to start. I would like to write weekly (even though I&amp;rsquo;m not sure if I will have enough time for that). I will try to post interesting things I learned in that week and also some articles I read.
+Java  Java streams cannot be reused  CSS  A Complete Guide to Flexbox - flexible CSS positioning  GIT  Break up changes into multiple git commits with git add -p  </description>
+    </item>
+    
+    <item>
+      <title>Useful links I found on the internet</title>
+      <link>https://klinki.github.io/blog/useful-links/</link>
+      <pubDate>Thu, 08 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/useful-links/</guid>
+      <description> Here are some interesting links I found on the internet.
+Git  Checkout Github pull request  Interesting topics  Programming Languages Design - Features/Program Validity  </description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; placement new operator and memory layout</title>
+      <link>https://klinki.github.io/blog/placement-new/</link>
+      <pubDate>Mon, 20 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/placement-new/</guid>
+      <description>I have discovered placement new operator when I worked on my Java Virtual Machine. It is useful when you need to dynamically create new instance of class and place it into already allocated memory. This is not so common scenario, but it is necessary if you want to write your own memory allocation system.
+Here is short code example, how to use it:
+#include &amp;lt;iostream&amp;gt;using namespace std; classA { int data = 0; A() { cout &amp;lt;&amp;lt; &amp;#34;Constructor called&amp;#34; &amp;lt;&amp;lt; endl; } ~A() { cout &amp;lt;&amp;lt; &amp;#34;Destructor called&amp;#34; &amp;lt;&amp;lt; endl; } } int main(int argc, const char** arv) { const int MEMORY_SIZE = 65536; // 64 kB 	char* rawMemory = new char[MEMORY_SIZE]; // allocating own memory pool  A* object = new(rawMemory) A(); // delete object; 	// CANNOT CALL delete, it would lead to memory corruption 	object-&amp;gt;~A(); // manually call destructor, if you need to get rid of object  delete[] rawMemory; // at the end, release ALL allocated memory  return 0; }  There are some circuimstances for using placement new.</description>
+    </item>
+    
+    <item>
+      <title>Memory layout</title>
+      <link>https://klinki.github.io/blog/memory-layout/</link>
+      <pubDate>Mon, 20 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/memory-layout/</guid>
+      <description>In this blog post I would like to describe memory layout and memory alignment and explain, why it is important.
+Memory pages In modern computers memory is divided into chunks called pages. On most systems, page is usually around 4 KiB. When you need to allocate some memory, operating system will allocate it to you page by page. Allocated memory is usally rounded to whole pages, so allocating 5 KiB of memory would (mostly) end up allocating 2 pages, 8 KiB in total.</description>
+    </item>
+    
+    <item>
+      <title>Testing post with code</title>
+      <link>https://klinki.github.io/blog/test-code/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/test-code/</guid>
+      <description>int main(int argc, char const *argv[]) { string myString; cout &amp;lt;&amp;lt; &amp;#34;input a string: &amp;#34;; getline(cin, myString); int length = myString.length(); char charArray = new char * [length]; charArray = myString; for(int i = 0; i &amp;lt; length; ++i){ cout &amp;lt;&amp;lt; charArray[i] &amp;lt;&amp;lt; &amp;#34; &amp;#34;; } return 0; } </description>
+    </item>
+    
+    <item>
+      <title>Trying Jekyll as new blog engine</title>
+      <link>https://klinki.github.io/blog/new-blog/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/new-blog/</guid>
+      <description>I just created this blog using Jekyll and GitHub pages. I hope it was the right choice and I will be happy with Jekyll.
+I plan to write about software development in general. I&amp;rsquo;m very interested in runtime systems, so I will write something about Java and .NET soon. I also love computer science in general, so maybe I will write about some stuff I learned in school too.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://klinki.github.io/drafts/2019-04-14-hobby-projekt-v-asp-2-ef-core/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/drafts/2019-04-14-hobby-projekt-v-asp-2-ef-core/</guid>
+      <description>Hobby projekt v ASP.NET Core díl druhý - EF Core Na samotném začátku projektu jsem přemýšlel, jaký zvolit ORM framework (a pokud vůbec nějaký používat). Mám rád čistou architekturu a chtěl jsem si vyzkoušet jak se dělá aplikace respektující tyto zásady v ASP.NETu. Jeden z mých hlavních požadavků na ORM knihovnu byl, aby se dala co nejsnáze odizolovat od doménových entit. Zjistil jsem, že tuto podmínku EF.Core celkem dobře splňuje (hlavně díky fluent konfiguraci) a tak jsem se rozhodl ho vyzkoušet.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://klinki.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/about/</guid>
+      <description>My name is David Klingenberg and I&amp;rsquo;m a Software Developer. I love Computer Science and I&amp;rsquo;m not afraid of low level programming. I got my hands dirty even on some Assembly code.
+My favourite programming language is C#, but I also love C++. I like to program in all different kinds of programming languages in general, basically from C to Smalltalk :) Currently I&amp;rsquo;m profesionally working with TypeScript, JavaScript and Java.</description>
+    </item>
+    
+  </channel>
+</rss>

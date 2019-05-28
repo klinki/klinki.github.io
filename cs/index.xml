@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Klinki&#39;s code blog</title>
+    <link>https://klinki.github.io/cs/</link>
+    <description>Recent content on Klinki&#39;s code blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 15 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://klinki.github.io/cs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>První český post</title>
+      <link>https://klinki.github.io/cs/blog/prvni-cesky-post/</link>
+      <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/cs/blog/prvni-cesky-post/</guid>
+      <description>Rozhodl jsem se že rozšířím svůj blog o články v češtině. Primárním jazykem pro mé další blogování nadále zůstane angličtina, ale některé články chci psát i česky. Zdá se mi že v některých oblastech je nedostatek českých zdrojů a tak bych rád svou troškou přispěl do mlýna.
+Přineslo mi to docela dost utrpení a stálo mě to hodně času, tak doufám že to bude mít nějaký smysl :)</description>
+    </item>
+    
+    <item>
+      <title>O mne</title>
+      <link>https://klinki.github.io/cs/o-mne/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/cs/o-mne/</guid>
+      <description>Jmenuji se David Klingenberg a jsem softwarový vývojář. Mám rád Computer Science a nebojím se low level programování. I got my hands dirty even on some Assembly code.
+Můj nejoblíběnější programovací jazyk je C#, ale také mám rád C++. Rád programuji v různých programovacích jazycích, viceméně od C až po Smalltalk. Momentálně profesionálně pracuji s TypeScriptem, JavaScriptem a Javou.
+Jsem fanoušek Open Source.
+Pracovní zkušenosti Mám profesionální pracovní zkušenosti s těmito jazyky a frameworky:</description>
+    </item>
+    
+  </channel>
+</rss>

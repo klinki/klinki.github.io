@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Klinki&#39;s code blog</title>
+    <link>https://klinki.github.io/tags/git/</link>
+    <description>Recent content in git on Klinki&#39;s code blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 04 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://klinki.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git tips</title>
+      <link>https://klinki.github.io/blog/git-tips/</link>
+      <pubDate>Sun, 04 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/blog/git-tips/</guid>
+      <description>In this post, I would like to explain some tips on successful git workflow.
+Feature branches Feature branches is very common and I think one of most important concepts of successful git workflow. Before you start working on new feature, create a new branch for it based on latest master. Then commit all work into this feature branch. If master changes and feature branch gets outdated, rebase it to current master (it is safe to do so with your private branch, but be careful when working with shared branches).</description>
+    </item>
+    
+  </channel>
+</rss>

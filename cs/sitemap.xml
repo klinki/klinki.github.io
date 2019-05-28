@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://klinki.github.io/cs/blog/</loc>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://klinki.github.io/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cs"
+                href="https://klinki.github.io/cs/blog/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/cs/</loc>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://klinki.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cs"
+                href="https://klinki.github.io/cs/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/cs/blog/prvni-cesky-post/</loc>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/cs/categories/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://klinki.github.io/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cs"
+                href="https://klinki.github.io/cs/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/cs/o-mne/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://klinki.github.io/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cs"
+                href="https://klinki.github.io/cs/o-mne/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/cs/pages/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://klinki.github.io/pages/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cs"
+                href="https://klinki.github.io/cs/pages/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/cs/posts/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://klinki.github.io/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cs"
+                href="https://klinki.github.io/cs/posts/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://klinki.github.io/cs/tags/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://klinki.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cs"
+                href="https://klinki.github.io/cs/tags/"
+                />
+  </url>
+  
+</urlset>

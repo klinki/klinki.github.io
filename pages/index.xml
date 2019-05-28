@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Klinki&#39;s code blog</title>
+    <link>https://klinki.github.io/pages/</link>
+    <description>Recent content in Pages on Klinki&#39;s code blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://klinki.github.io/pages/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://klinki.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://klinki.github.io/about/</guid>
+      <description>My name is David Klingenberg and I&amp;rsquo;m a Software Developer. I love Computer Science and I&amp;rsquo;m not afraid of low level programming. I got my hands dirty even on some Assembly code.
+My favourite programming language is C#, but I also love C++. I like to program in all different kinds of programming languages in general, basically from C to Smalltalk :) Currently I&amp;rsquo;m profesionally working with TypeScript, JavaScript and Java.</description>
+    </item>
+    
+  </channel>
+</rss>

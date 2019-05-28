@@ -13,28 +13,28 @@ There are quite a lot of articles on the internet on that topic, but we had one 
 
 So using webhooks and after push notifications is not going to work in that case. It took me some time to figure out how to solve that issue, but I managed to do that using polling. Since it was not really easy to do so, I will show you few steps how to solve that problem.
 
-1) Make sure you have required Jenkins plugins installed
+1. Make sure you have required Jenkins plugins installed
+
 - git
 - gitlab
 
-2) Log into Gitlab and generate application API key in `User Settings` -> `Access Tokens` section
+1. Log into Gitlab and generate application API key in `User Settings` -> `Access Tokens` section
 ![gitlab create access token](/images/gitlab-jenkins/gitlab-access-token.png)
 
-3) Configure Jenkins gitlab plugin
+1. Configure Jenkins gitlab plugin
 `Jenkins` -> `Manage Jenkins` -> `Configure System` (or url `/configure`)
 ![Configure jenkins gitlab](/images/gitlab-jenkins/gitlab-config.png)
 
-4) Create multibranch job with scheduled executions
+1. Create multibranch job with scheduled executions
 Configure job to use git and do branch discovery.
 ![Jenkins git configuration](/images/gitlab-jenkins/jenkins-branch-sources.png)
 
-5) Use following `Jenkinsfile` as an inspiration
+1. Use following `Jenkinsfile` as an inspiration
 {{<gist klinki b73b4e76be460eed381a535f4e03ca14>}}
-
 
 Now when you run your job, you should see in log something about `Jenkinsfile found. Met criteria` for each branch containing Jenkinsfile. It should also create new jobs and fire up execution on them.
 
-```
+```text
  Checking branches...
   Checking branch new-branch
       ‘Jenkinsfile’ found

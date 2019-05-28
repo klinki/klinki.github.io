@@ -3,6 +3,7 @@ published: true
 title: C++ placement new operator and memory layout
 date: "2016-06-20"
 slug: placement-new
+tags: [c++]
 aliases:
     - /placement-new
 ---

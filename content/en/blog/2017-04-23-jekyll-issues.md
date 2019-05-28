@@ -3,6 +3,7 @@ published: true
 date: "2017-04-23"
 slug: jekyll-issues
 title: Jekyll issues
+tags: [blog]
 aliases:
     - /jekyll-issues
 ---

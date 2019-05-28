@@ -3,6 +3,7 @@ published: true
 title: Memory layout
 date: "2016-06-20"
 slug: memory-layout
+tags: [c++]
 aliases:
     - /memory-layout
 ---

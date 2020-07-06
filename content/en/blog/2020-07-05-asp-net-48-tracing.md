@@ -22,7 +22,9 @@ Outline:
 
 ## Why to do request tracing and contextual logging
 
+In these examples, I will use logging library [Serilog](https://github.com/serilog/serilog) and [datalust Seq](https://datalust.co/) for centralized log management. I use both every day and I must say I'm verry happy with them, I think it os one of the best logging infrastructure available for .NET log management.
 
+Most of information in this article is generic and apply to any logging framework which captures the contextual information.
 
 ## Serilog configuration
 
@@ -105,15 +107,6 @@ And third request is made again from ASP.NET Core to ASP.NET Core. Again, `Reque
 ```
 
 If we do the same for full framework app, we don't get the `Request-Id` header.
-
-Let's see what is getting logged into Seq.
-
-I use [datalust Seq](https://datalust.co/) for centralized log management. I must say I'm verry happy with this log management tool
- and I think it os one of the best tools available for log management. As logging library I use Serilog.
-
-`TraceId`, `SpanId`, `ParentId`
-
-These 3 properties are super useful for debugging failed requests. `TraceId` remains the same for all related subsequent requests in the system.
 
 ## Adding tracing for ASP.NET Framework app
 
@@ -247,7 +240,7 @@ Most of the generated services are created as partial classes. They have `GetWeb
  which is used to send request to web service. We can easily modify `GetWebRequest` method to fill in `Request-Id` headers.
 
 ```csharp
-namespace RequestTracing.com.emclient.licensing
+namespace RequestTracing.GeneratedWebServiceClient
 {
     public partial class Service
     {

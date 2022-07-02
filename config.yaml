@@ -16,6 +16,23 @@ disqusShortname: klinki
 googleAnalytics: UA-89466580-1
 comments: true
 
+markup:
+  defaultMarkdownHandler: goldmark
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    hl_inline: false
+    lineAnchors: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: false
+    noClasses: true
+    noHl: false
+    style: monokai
+    tabWidth: 4
+
 languages:
   cs:
     contentDir: content/cs
@@ -85,8 +102,8 @@ params:
       twitter: klinkicz
       linkedin: davidklingenberg
       github: klinki
-
-
+  customCss:
+    - css/syntax.css
 # useFilenameDateAsFallback: true
 
 taxonomies:
